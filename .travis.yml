@@ -22,5 +22,6 @@ deploy:
   region: us-west-2
   app: travelperk
   env: Custom-env
+  bucket_name: elasticbeanstalk-travelperk
   on:
     repo: nicogarcia/travelperk_api
