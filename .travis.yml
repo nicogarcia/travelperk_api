@@ -13,3 +13,14 @@ script:
   - python manage.py test
 
 cache: pip
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: AKIAI2LDS5ICRHILJBRA
+  secret_access_key:
+    secure: Ts2HRWA/n0xxNta4KgmrEu9sg7g8E7E49mPMKWw149kVynpIhS71RyZiTqDTDtFzk+odLl0fW6Kap3BGLur41El5QtK57iq2fcGeOUZMXK5IuAZxy+uCI69E3kOBTlyuXKTTaABWDLpnkYdIzBOi3jx3gTud9jA+zuPucTMtp1nI0ATP3U28iDmjeIjhKWOHs/anl/PC0nk1QTemitRbn/yEQ8oyv24epBGfJ2pZj75kPfFPOcZoJ2RtuQLmatG4NRIzUZBSkmreWiEDawO15SO+CUgb0kfYalzNfMmbgPYvVEGXP2uI/DbUDviBhroJbdEMmXRwQ6lR/enovH6AplhIvgpYWRy+KeRuxGTUtBolljjrQDiYJ6/9vZ1kLKu7pTr0TkfhluFBykUMdt8ZIQGVTQsVDCJkqDATHBcj/uPt4tlYbQQsbN/1X72b5UbH4vrk9TlgOhkPYqG1oqnRZpKZXTzQ5SSxEXgmcjUgr8RFFYKxZ4iP7grVvmHRGY9QhcgNjscgPf1HtQ0Pei3Gke1zeko7ZaAKz/coZn47jHg/7nr20vS/u+TqyHi/KLC36fk3+lJa8UeNSr/t49Hdfqxdstj/UQgFm+aN0ioCrMRH0yMB0x63f1xUG2sLb3pu51sSonES4duBbLKdjtlcTFPPhtLbGDdfTkmrL4M+Las=
+  region: us-west-2
+  app: travelperk
+  env: Custom-env
+  on:
+    repo: nicogarcia/travelperk_api
