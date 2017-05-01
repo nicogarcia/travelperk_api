@@ -59,6 +59,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'travelperk_project.urls'
 
+WSGI_APPLICATION = 'travelperk_project.wsgi_production.application'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
