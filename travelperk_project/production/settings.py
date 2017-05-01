@@ -147,3 +147,23 @@ REST_FRAMEWORK = {
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
 }
+
+LOGS_DIR = '/opt/python/log/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'django_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGS_DIR, 'django.log')
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['django_handler'],
+            'level': 'DEBUG',
+        }
+    },
+}
