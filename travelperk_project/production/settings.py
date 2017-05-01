@@ -87,13 +87,6 @@ DATABASES = {
         'HOST': os.environ['DATABASE_HOST'],
         'USER': 'root',
         'PASSWORD': os.environ['DATABASE_PASSWORD'],
-
-        # Recommended options from django docs
-        'OPTIONS': {
-            'client_encoding': 'UTF8',
-            'default_transaction_isolation': 'read committed',
-            'timezone': 'UTC'
-        }
     }
 }
 
